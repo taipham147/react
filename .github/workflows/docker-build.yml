@@ -39,4 +39,4 @@ jobs:
                   ssh-keyscan -H $SSH_ADDRESS  >> ~/.ssh/known_hosts
                   echo "$SSH_PRIVATE_KEY" > ~/.ssh/id_rsa
                   chmod 600 ~/.ssh/id_rsa
-                  ssh ubuntu@$SSH_ADDRESS "docker pull taipham147/app:latest; docker run --name bt6vn -d -p 3333:3000 taipham147/app:latest"
+                  ssh ubuntu@$SSH_ADDRESS "sudo docker pull taipham147/app:latest;sudo docker run --name bt6vn -d -p 3333:3000 taipham147/app:latest"
